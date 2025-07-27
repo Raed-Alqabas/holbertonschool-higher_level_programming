@@ -3,5 +3,4 @@
 #empty square
 class Square:
     #empty square2
-    pass
 
