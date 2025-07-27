@@ -5,3 +5,4 @@ class Square:
 p = Square()
 print(type(p))
 print(p.__dict__)
+
