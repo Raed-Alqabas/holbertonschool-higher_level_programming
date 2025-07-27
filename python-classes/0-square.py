@@ -3,4 +3,5 @@ class Square:
     pass
 
 p = Square()
-print(p)
+print(type(p))
+print(p.__dict__)
