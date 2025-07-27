@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""modler class square"""
+"""Modler class square"""
 
 class Square:
-    """calss square"""
+    """Represent a square"""
+
     pass
 
