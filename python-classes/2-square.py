@@ -1,34 +1,27 @@
 #!/usr/bin/python3
-Square = __import__('2-square').Square
+"""Define a class Square that defines a square by: (based on 1-square.py)"""
 
-my_square_1 = Square(3)
-print(type(my_square_1))
-print(my_square_1.__dict__)
 
-my_square_2 = Square()
-print(type(my_square_2))
-print(my_square_2.__dict__)
+class Square:
+    """Represent a square."""
 
-try:
-    print(my_square_1.size)
-except Exception as e:
-    print(e)
+    def __init__(self, size=0):
+        """Initialize a new square.
 
-try:
-    print(my_square_1.__size)
-except Exception as e:
-    print(e)
+        Args:
+            size (int): The size of the new square.
+        """
+        self.size = size
 
-try:
-    my_square_3 = Square("3")
-    print(type(my_square_3))
-    print(my_square_3.__dict__)
-except Exception as e:
-    print(e)
+    @property
+    def size(self):
+        """Get/set the current size of the square."""
+        return self.__size
 
-try:
-    my_square_4 = Square(-89)
-    print(type(my_square_4))
-    print(my_square_4.__dict__)
-except Exception as e:
-    print(e)
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
